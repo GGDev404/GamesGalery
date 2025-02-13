@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <h1>Galeria de Juegos</h1>
+        </nav>
+    </header>
+    <section id="hero">
+        <h2 id="TitleHero">Aqui podras tener una galeria de imagenes de los juegos que mas te han gustado </h2>
+        <p>Puedes añadirle el nombre y la fecha en la que lo jugaste</p>
+        <div class="btn-container">
+            <button id="btn-add-game">Añadir Juego</button>
+            <button id="btn-sort-name">Ordenar por Nombre</button>
+            <button id="btn-sort-date">Ordenar por Fecha</button>
+        </div>
+    </section>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Añadir Juego</h2>
+            <form id="form">
+                <div class="form-control">
+                    <label for="name">Nombre del Juego</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre del Juego">
+                </div>
+                <div class="form-control">
+                    <label for="date">Fecha de Juego</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="form-control">
+                    <label for="image-url">URL de la Imagen</label>
+                    <input type="url" id="image-url" name="image-url" placeholder="URL de la Imagen">
+                </div>
+                <button type="submit" class="btn">Añadir Juego</button>
+            </form>
+        </div>
+    </div>
+    <div id="games" class="games">
+        <h2>Galeria de Juegos</h2>
+        <div class="games-container" id="games-container">
+            <!-- <div class="game">
+                <h3>Nombre del Juego</h3>
+                <p>Fecha de Juego</p>
+                <img src="URL de la Imagen" alt="Imagen del Juego">
+            </div> -->
+        </div>
+    </div>
+    <script src="/scripts.js"></script>
+</body>
+</html>
