@@ -133,6 +133,7 @@ button:hover {
     padding: 20px;
     width: 200px;
     text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .game h3 {
@@ -146,4 +147,13 @@ button:hover {
 .game img {
     max-width: 100%;
     border-radius: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

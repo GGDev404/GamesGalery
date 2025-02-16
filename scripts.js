@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const date = document.getElementById('date').value;
         const imageUrl = document.getElementById('image-url').value;
 
-        if (name && date && imageUrl) {
-            const game = { name, date, imageUrl };
+        if (name && date && isValidUrl(imageUrl)) {
+            const game = { name, date, imageUrl, addedAt: new Date() };
             games.push(game);
             addGameToGallery(game);
             form.reset();
             modal.style.display = 'none';
         } else {
-            alert('Por favor, completa todos los campos.');
+            alert('Por favor, completa todos los campos con información válida.');
         }
     });
 
@@ -83,5 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderGames() {
         gamesContainer.innerHTML = '';
         games.forEach(game => addGameToGallery(game));
+    }
+
+    // Function to validate URL
+    function isValidUrl(url) {
+        try {
+            new URL(url);
+            return true;
+        } catch (_) {
+            return false;
+        }
     }
 });
